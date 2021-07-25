@@ -14,7 +14,7 @@ Tables created in Postgres:
 3. charges
 
 ## TDC Schema
-![github-small](https://app.diagrams.net/#G1UWJngdSQh6sPq0CStWcXk_VD_kqEDxix)
+![github-small](https://github.com/Kaylakh/Driver_coop/blob/main/schema.JPG)
 
 ## Installation
 
