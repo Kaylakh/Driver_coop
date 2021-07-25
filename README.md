@@ -37,6 +37,24 @@ Python Libraries:
 * This file needs to be exectued, which in turn triggers the above files
 * This file extracts data from the URL, transform into dataframes and loads to respective tables
 * It also displays "drivers who have been churned" and "trips without charges"
+* Query for "trips without charges"
+ <code>
+    select c.trip_id
+    from charges c  
+    inner join trips t
+    on c.trip_id = t.trip_id
+    where amount_cents is NULL or amount_cents = 0;
+</code>
+
+* Query for drivers who have been churned
+
+  <code>
+        select t.driver_id, d.first_name
+        from trips t
+        inner join drivers d
+        on t.driver_id = d.driver_id
+        where date(t.dropoff_timestamp)< (cast('2021-07-11' as date) - interval '14 day');
+  </code>
 
 
 
